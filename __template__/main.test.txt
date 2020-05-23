@@ -1,0 +1,19 @@
+import resolve from './MODULE_NAME'
+
+const sample:string[][] = [["",""]]
+
+sample.map((v:string[], i:number) => {
+  test(`Sample#${i+1}`, () => {
+    expect(resolve(v[0])).toBe(v[1])
+  })
+})
+
+// const custom:string[][] = [
+//   [``,``]
+// ]
+
+// custom.map((v:string[], i:number) => {
+//   test(`Custom#${i+1}`, () => {
+//     expect(resolve(v[0])).toBe(v[1])
+//   })
+// })

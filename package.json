@@ -1,0 +1,38 @@
+{
+  "name": "atcoder-typescript-starter",
+  "version": "1.0.0",
+  "description": "The Atcoder starter of Typescript.",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "test": "export LOCAL_DEBUG=1 && jest",
+    "create": "sh scripts/create.sh"
+  },
+  "author": "w2-yamaguchi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "25.2.3",
+    "@types/node": "14.0.5",
+    "jest": "26.0.1",
+    "ts-jest": "26.0.0",
+    "ts-node": "8.10.1",
+    "typescript": "3.9.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/src/**/*.test.ts"
+    ]
+  }
+}
