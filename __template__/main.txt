@@ -15,11 +15,17 @@ const resolve = (stdin: string):string => {
   }
 }
 
+// Helper
+const _debugLog = (arg: any):void => {
+  if (process.env.LOCAL_DEBUG) console.log(arg)
+}
+const _isNumber = (val:string | number):boolean => new RegExp(/^[0-9]+(\.[0-9]+)?$/).test(`${val}`)
+const _transpose = (a:any[][]) => a[0].map((_, i) => a.map(r => r[i]))
+
+// Runner
 if (!process.env.LOCAL_DEBUG) {
   const stdin:string = fs.readFileSync("/dev/stdin", "utf8") as string
   console.log(resolve(stdin))
-}
-
-// -- Copy the above from here.
+}
 
 export default resolve

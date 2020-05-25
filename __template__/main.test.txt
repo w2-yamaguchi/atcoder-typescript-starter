@@ -1,9 +1,29 @@
 import resolve from './MODULE_NAME'
 
 const in1 = ``
-
 const out1 = ``
 
+const in2 = ``
+const out2 = ``
+
+const in3 = ``
+const out3 = ``
+
+const in4 = ``
+const out4 = ``
+
 test(`Sample#1`, () => {
+  expect(resolve(in1)).toBe(out1)
+})
+
+test(`Sample#2`, () => {
+  expect(resolve(in1)).toBe(out1)
+})
+
+test(`Sample#3`, () => {
+  expect(resolve(in1)).toBe(out1)
+})
+
+test(`Sample#4`, () => {
   expect(resolve(in1)).toBe(out1)
 })
